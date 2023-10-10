@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= movie.title %> </title>
+    <link rel='stylesheet' href='/css/style.css' />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <%- include('./partials/header.ejs') %>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table table-bordered">
+                    <thead class="table-dark">
+                        <tr>
+                            <th colspan="2" class="text-center"><h1><%= movie.title %></h1></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Rating</th>
+                            <td><%= movie.rating %></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Awards</th>
+                            <td><%= movie.awards %></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Length</th>
+                            <td><%= movie.length %> min</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Release Date</th>
+                            <td><%= moment(movie.release_date).format('DD/MM/YYYY') %></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <br>
+    <%- include('./partials/script.ejs') %>
+</body>
+</html>
