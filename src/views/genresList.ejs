@@ -6,9 +6,8 @@
             <div class="container mt-5">
                 <div class="row">
                     <div class="col-md-12 text-center">
-                        <h1 class="mb-4">LISTADO DE GENEROS</h1>
-                        <a class="btn btn-success mb-2" href="/genres/add">Agregar nuevo genero</a>
-                        <a class="btn btn-secondary mb-2" href="/">Inicio</a>
+                        <h1 class="mb-4">LISTADO DE GENEROS</h1> 
+                        <a class="btn btn-success mb-2" href="/movies">Listado de Peliculas</a>                      
                         <table class="table table-bordered">
                             <thead class="table-dark">
                                 <tr>
@@ -70,12 +69,9 @@
                                                     <% } %>
                                         </td>
                                         <td>
-                                            <a class="btn btn-secondary" href="/genres/detail/<%= genre.id %>"><i
-                                                    class="fa-solid fa-eye"></i></a>
-                                            <a class="btn btn-primary" href="/genres/edit/<%= genre.id %>"><i
-                                                    class="fa-solid fa-pen-to-square"></i></a>
-                                            <a class="btn btn-danger" href="/genres/delete/<%= genre.id %>"><i
-                                                    class="fa-solid fa-trash"></i></a>
+                                            <a class="btn btn-secondary" href="/genres/detail/<%= genre.id %>"><i class="fa-solid fa-eye"></i></a>
+                                          <!-- <a class="btn btn-primary" href="/genres/edit/<%= genre.id %>"><i class="fa-solid fa-pen-to-square"></i></a>-->
+                                           <!--- <a class="btn btn-danger" href="/genres/delete/<%= genre.id %>"><i class="fa-solid fa-trash"></i></a>-->
                                         </td>
                                     </tr>
                                     <% }); %>
